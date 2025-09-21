@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { DefaultService as EmployeeApiService } from './api/services/default.service';
 import { Observable } from 'rxjs';
-import { Employee } from './api/models/employee';
+import { ApiService as EmployeeApiService } from '../openapi/services';
 
 @Injectable({providedIn: 'root'})
 export class EmployeeService {
