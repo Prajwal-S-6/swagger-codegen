@@ -1,0 +1,47 @@
+openapi: 3.0.1
+info:
+  title: Employee API
+  version: 1.0.0
+
+paths:
+  /employees:
+    get:
+      summary: Get all employees
+      operationId: getEmployees
+      responses:
+        '200':
+          description: List of employees
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Employee'
+    post:
+      summary: Create new employee
+      operationId: createEmployee
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Employee'
+      responses:
+        '201':
+          description: Employee created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
+components:
+  schemas:
+    Employee:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        firstName:
+          type: string
+        lastName:
+          type: string
