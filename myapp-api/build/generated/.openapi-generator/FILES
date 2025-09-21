@@ -1,6 +1,0 @@
-.openapi-generator-ignore
-README.md
-pom.xml
-src/main/java/com/java/katas/api/ApiUtil.java
-src/main/java/com/java/katas/api/EmployeesApi.java
-src/main/java/com/java/katas/model/Employee.java
